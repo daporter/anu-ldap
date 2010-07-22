@@ -5,11 +5,11 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "anu-ldap"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{A library for querying the ANU LDAP server.}
+    gem.summary = "A Ruby library for querying the ANU LDAP server."
     gem.email = "david.porter@anu.edu.au"
     gem.homepage = "https://doiweb-repo2.anu.edu.au/repositories/es-projects/anu-auth"
     gem.authors = ["David Porter"]
+    gem.add_dependency "net-ldap"
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
