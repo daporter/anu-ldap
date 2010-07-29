@@ -1,0 +1,31 @@
+= AnuLdap
+
+== Description
+
+AnuLdap is a Ruby module for easily querying the ANU LDAP server.
+
+== Install
+
+ $ gem install anu-ldap
+
+== Usage
+
+ require "anu-ldap"
+
+ # Find users by email address:
+
+ entries = AnuLdap.find_by_email("david.porter@anu.edu.au")
+ entries.each do |e|
+   puts "Uni ID:     #{e[:uni_id]}"
+   puts "Email:      #{e[:email]}"
+   puts "Given name: #{e[:given_name]}"
+   puts "Surname:    #{e[:surname]}"
+ end
+
+ # Authenticate a user:
+
+ if AnuLdap.authenticate("u3990518", "secret")
+    puts "Successfully authenticated"
+ else
+    puts "Authentication failure"
+ end
