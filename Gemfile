@@ -1,5 +1,5 @@
 source "http://rubygems.org"
 
 gem "jeweler"
-gem "net-ldap"
+gem "ruby-net-ldap"
 gem "rspec"

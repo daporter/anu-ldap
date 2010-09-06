@@ -9,7 +9,7 @@ begin
     gem.email = "david.porter@anu.edu.au"
     gem.homepage = "https://doiweb-repo2.anu.edu.au/repositories/es-projects/anu-auth"
     gem.authors = ["David Porter"]
-    gem.add_dependency "net-ldap"
+    gem.add_dependency "ruby-net-ldap"
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.files = FileList["lib/**/*.rb", "bin/*", '[A-Z]*', 'spec/**/*']
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
