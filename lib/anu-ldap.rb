@@ -19,20 +19,20 @@ module AnuLdap
     find_all_by_uni_id(uni_id).first
   end
 
-  # Find first ANU LDAP entry with the given _email_.
-  #
-  # Return the entry as a hash with keys +:uni_id+, +:email+, +:given_name+,
-  # +:surname+, +:full_name+.
-  def self.find_by_email(email)
-    find_by("mail", email).first
-  end
-
   # Find all ANU LDAP entries with the given _email_.
   #
   # Return entries as a hash with keys +:uni_id+, +:email+, +:given_name+,
   # +:surname+, +:full_name+.
   def self.find_all_by_email(email)
-    find_by_email(email).first
+    find_by("mail", email)
+  end
+
+  # Find first ANU LDAP entry with the given _email_.
+  #
+  # Return the entry as a hash with keys +:uni_id+, +:email+, +:given_name+,
+  # +:surname+, +:full_name+.
+  def self.find_by_email(email)
+    find_all_by_email(email).first
   end
 
   # Authenticate credentials against ANU LDAP.
