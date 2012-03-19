@@ -62,7 +62,7 @@ module AnuLdap
   # Get a new connection to the ANU LDAP server.
   def self.get_new_ldap()
     Net::LDAP.new(:host       => "ldap.anu.edu.au",
-                  :port       => 636,
+                  :port       => 389,
                   :encryption => :simple_tls)
   end
 
