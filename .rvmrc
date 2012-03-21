@@ -1,5 +1,1 @@
-if [[ -n "$rvm_environments_path" && -s "$rvm_environments_path/ruby-1.9.2-p0@anu_ldap" ]] ; then
-  \. "$rvm_environments_path/ruby-1.9.2-p0@anu_ldap"
-else
-  rvm "ruby-1.9.2-p0@anu_ldap"
-fi
+rvm ruby-1.9.3@anu_ldap
